@@ -9,10 +9,10 @@
     :root {
       --primary: #1e40af;
       --accent: #2563eb;
-      --background: #f8fafc;
-      --card-bg: #ffffff;
-      --text: #1e293b;
-      --subtext: #64748b;
+      --background: #0f172a;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --text: #f1f5f9;
+      --subtext: #94a3b8;
     }
 
     * {
@@ -23,7 +23,8 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: var(--background);
+      background: var(--background) url('https://images.pexels.com/photos/713049/pexels-photo-713049.jpeg') no-repeat center center fixed;
+      background-size: cover;
       color: var(--text);
       padding: 40px 20px;
       max-width: 1000px;
@@ -59,13 +60,17 @@
       background: var(--card-bg);
       border-radius: 12px;
       padding: 30px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       margin-bottom: 40px;
       transition: box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 
-    section:hover {
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .section-title {
@@ -127,13 +132,13 @@
     <p class="tagline">💡 Crafting elegant, efficient, and user-friendly digital solutions</p>
   </header>
 
-  <section>
+  <section class="fade-in">
     <h2 class="section-title">About Me</h2>
     <p>I’m a dedicated freelance software developer with expertise in building both mobile and web applications. My skill set spans React Native, PHP, Python, and UI/UX design — allowing me to build solutions that are visually polished and functionally robust.</p>
     <p>I aim to collaborate with businesses and individuals to transform their ideas into impactful, seamless digital products.</p>
   </section>
 
-  <section>
+  <section class="fade-in">
     <h2 class="section-title">Projects</h2>
 
     <div class="project">
@@ -151,13 +156,13 @@
     </div>
   </section>
 
-  <section>
+  <section class="fade-in">
     <h2 class="section-title">Skills</h2>
     <p class="skills-list">React Native • JavaScript • PHP • Python • MySQL</p>
     <p class="skills-list">HTML5 • CSS3 • Firebase • Figma • Adobe XD • Git & GitHub</p>
   </section>
 
-  <section>
+  <section class="fade-in">
     <h2 class="section-title">Contact</h2>
     <div class="contact-links">
       <a href="mailto:rabiabembi8@gmail.com">📧 rabiabembi8@gmail.com</a>
@@ -169,5 +174,30 @@
   <footer>
     &copy; 2025 Rabia Bembi. All rights reserved.
   </footer>
+
+  <script>
+    // JavaScript for fade-in effect on scroll
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add('visible');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 </body>
 </html>
