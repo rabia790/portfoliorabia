@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rabia Bembi | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rabia Bembi | Freelance Software Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -14,92 +13,129 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #f9f9f9;
+      background: #f5f7fa;
       color: #333;
       line-height: 1.6;
-      padding: 20px;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
     }
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
     header h1 {
-      font-size: 2.5rem;
-      color: #1e3a8a;
+      font-size: 3rem;
+      color: #1e40af;
+      margin-bottom: 0.3em;
+      font-weight: 700;
     }
     header p {
-      font-size: 1.2rem;
-      color: #555;
+      font-size: 1.3rem;
+      color: #475569;
+      font-weight: 500;
+      margin-bottom: 0.2em;
+    }
+    header .tagline {
+      font-style: italic;
+      color: #64748b;
+      font-weight: 400;
     }
     section {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.07);
+      transition: box-shadow 0.3s ease;
+    }
+    section:hover {
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
     }
     .section-title {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      border-left: 5px solid #1e3a8a;
-      padding-left: 10px;
-      color: #1e3a8a;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      border-left: 6px solid #1e40af;
+      padding-left: 15px;
+      color: #1e40af;
+      font-weight: 700;
     }
     .project, .skill {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     .project-title {
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #1e40af;
+      margin-bottom: 6px;
+    }
+    p {
+      color: #334155;
+      margin-bottom: 10px;
     }
     a {
       color: #2563eb;
       text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+    .skills-list {
+      font-weight: 600;
+      color: #475569;
     }
     footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 60px;
       font-size: 0.9rem;
+      color: #94a3b8;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Rabia Bembi</h1>
-    <p>Software Developer | Web & App Designer | UI/UX Creative</p>
-    <p>💡 Turning ideas into intuitive digital experiences</p>
+    <p>Freelance Software Developer | Web & Mobile App Specialist</p>
+    <p class="tagline">💡 Crafting elegant, efficient, and user-friendly digital solutions</p>
   </header>
 
   <section>
     <h2 class="section-title">About Me</h2>
-    <p>I'm a passionate Software Developer with a focus on mobile and web applications. I specialize in React Native, PHP, Python, and UI/UX design. With experience in both frontend and backend development, I create solutions that are both beautiful and functional.</p>
-    <p>Currently working at Cygnisoft, I'm always eager to take on new challenges and build impactful digital products.</p>
+    <p>I’m a dedicated freelance Software Developer with expertise in building mobile and web applications. My skillset includes React Native, PHP, Python, and UI/UX design, enabling me to deliver solutions that are both visually appealing and functionally robust.</p>
+    <p>My goal is to partner with clients to turn ideas into impactful digital experiences that help their businesses grow and thrive.</p>
   </section>
 
   <section>
     <h2 class="section-title">Projects</h2>
     <div class="project">
       <div class="project-title">Candidate Tracker App</div>
-      <p>A mobile app for managing job applicants, with employee and candidate logins.</p>
-      <p><strong>Tech Used:</strong> React Native, Firebase</p>
-      <a href="https://github.com/rabia790">View on GitHub</a>
+      <p>A mobile app for managing job applicants with secure employee and candidate logins.</p>
+      <p class="skills-list"><strong>Tech Used:</strong> React Native, Firebase</p>
+      <a href="https://github.com/rabia790" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </div>
 
     <div class="project">
       <div class="project-title">Portfolio Website</div>
-      <p>A clean and responsive portfolio site built using HTML and CSS.</p>
-      <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
-      <a href="https://github.com/rabia790">View on GitHub</a>
+      <p>A clean, responsive portfolio site crafted with HTML, CSS, and JavaScript to showcase work elegantly.</p>
+      <p class="skills-list"><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+      <a href="https://github.com/rabia790" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </div>
   </section>
 
   <section>
     <h2 class="section-title">Skills</h2>
     <div class="skill">React Native • JavaScript • PHP • Python • MySQL</div>
-    <div class="skill">HTML5 • CSS3 • Firebase • Figma • Adobe XD • GitHub</div>
+    <div class="skill">HTML5 • CSS3 • Firebase • Figma • Adobe XD • Git & GitHub</div>
   </section>
 
   <section>
     <h2 class="section-title">Contact</h2>
     <p>Email: <a href="mailto:rabiabembi8@gmail.com">rabiabembi8@gmail.com</a></p>
-    <p>Phone: +1 437-265-9800</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/rabiabembi">linkedin.com/in/rabiabembi</a></p>
-    <p>GitHub: <a href="https://github.com/rabia790">github.com/rabia790</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/rabiabembi" target="_blank" rel="noopener noreferrer">linkedin.com/in/rabiabembi</a></p>
+    <p>GitHub: <a href="https://github.com/rabia790" target="_blank" rel="noopener noreferrer">github.com/rabia790</a></p>
   </section>
 
   <footer>
